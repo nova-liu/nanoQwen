@@ -1,0 +1,24 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.backends.legacy:build"
+
+[project]
+name = "nano-qwen"
+version = "0.1.0"
+description = "A minimal local inference CLI for Qwen2.5-0.5B-Instruct with KV cache support"
+requires-python = ">=3.11"
+dependencies = [
+    "torch>=2.10.0",
+    "transformers>=5.3.0",
+    "huggingface_hub>=1.6.0",
+    "accelerate>=1.13.0",
+    "safetensors>=0.7.0",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=8.0",
+]
+
+[tool.setuptools.packages.find]
+where = ["."]
